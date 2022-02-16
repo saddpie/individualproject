@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="cs.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body style="background-image: url(stars.jpg);">
+
+    <div id="app">
+        <div>
+            <transition name="slide-fade">
+                <article v-if="show">
+                    <a href="#" onclick="return f1();" id="ref">
+                        <h1 id="pad" style="font-size: 70px; margin-right: 25%;">{{elm}}</h1>
+                    </a>
+                </article>
+            </transition>
+        </div>
+
+
+        <transition name="slide-fade">
+
+            <img :src='image1' v-if="show" id="imgg" width="100px" alt="1">
+
+        </transition>
+
+        <button class="btn btn-success" id="bruh" v-on:click="show = !show ;Pi()"><span>&#8592;</span></button>
+
+
+        <button class="btn btn-success" id="bruh" v-on:click="show = !show ;Pi2()"><span>&#8594;</span></button>
+
+
+    </div>
+
+
+    <script src="jos.js"></script>
+</body>
+
+</html>
+
+<script>
+    function f1() {
+        if (document.getElementById("pad").innerHTML == "About Me") {
+            document.getElementById("ref").href = "anel.html";
+        } else if (document.getElementById("pad").innerHTML == "My Skills") {
+            document.getElementById("ref").href = "port.html";
+        } else if (document.getElementById("pad").innerHTML == "Contact Me") {
+            document.getElementById("ref").href = "https://t.me/saddpie";
+        }
+    }
+</script>
